@@ -11,6 +11,16 @@ Aggressive scan:
 nmap -sS -A targetaddress
 ```
 
+Default scripts, version info, write normal output to file
+```
+nmap -sC -sV -oN /where/to/write/results targetaddress
+```
+
+All ports, normal output:
+```
+nmap -p- -oN /where/to/write/results targetaddress
+```
+
 ### misc
 
 List smb shares:
