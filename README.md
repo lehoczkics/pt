@@ -43,9 +43,27 @@ Start netcat listener:
 nc -lvnp <portnumber>
 ```
 
+Spawn bash with python:
+```
+python -c 'import pty;pty.spawn("/bin/bash")'
+```
+
 ## Windows
 
 Get powershell history:
 ```
 type C:\Users\<username>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
+
+cmd enumeration:
+```
+net users
+
+systeminfo | findstr /B /C: "OS Name"/C: "OS Version"
+
+wmic service list
+```
+
+## Bookmarks
+[Reverse shell cheat sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+
