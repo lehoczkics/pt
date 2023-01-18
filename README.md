@@ -24,6 +24,40 @@ All ports, normal output:
 nmap -p- -oN /where/to/write/results targetaddress
 ```
 
+### Stabilise a reverse shell
+
+#### rlwrap
+Simply start the listener in rlwrap:
+```
+rlwrap nc -lvnp <port>
+```
+
+#### spawn pty
+For interactive shell, spawn bash from python on the target machine and set xtrerm:
+```
+python -c 'import pty;pty.spawn("/bin/bash")'
+
+export TERM=xterm
+```
+
+Background it with `Ctrl + Z`, then switch off echo of the parent shell and foreground it again:
+```
+stty raw -echo; fg
+```
+
+#### Bonus: set correct shell boundaries
+
+First get tty rows and columns from the local shell:
+```
+stty -a | grep -e rows -e columns
+```
+
+Then set the same values in the remote shell:
+```
+stty rows <number>
+stty cols <number>
+```
+
 ### misc
 
 List smb shares:
@@ -44,11 +78,6 @@ python3 -m http.server <portnumer>
 Start netcat listener:
 ```
 nc -lvnp <portnumber>
-```
-
-Spawn bash with python:
-```
-python -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
 Password BF example with fuff:
