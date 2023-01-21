@@ -108,5 +108,5 @@ wmic service list
 [SecLists - wordlists for all the things](https://github.com/danielmiessler/SecLists)\
 [Payloads all the things - as the name suggests](https://github.com/swisskyrepo/PayloadsAllTheThings)\
 [PayloadBox - as the name suggests](https://github.com/payloadbox)\
-[SharpCollecion - Windows tools](https://github.com/Flangvik/SharpCollection)
-
+[SharpCollecion - Windows tools](https://github.com/Flangvik/SharpCollection)\
+[Hacktricks book](https://book.hacktricks.xyz/)
