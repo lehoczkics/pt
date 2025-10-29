@@ -109,4 +109,4 @@ wmic service list
 [Payloads all the things - as the name suggests](https://github.com/swisskyrepo/PayloadsAllTheThings)\
 [PayloadBox - as the name suggests](https://github.com/payloadbox)\
 [SharpCollecion - Windows tools](https://github.com/Flangvik/SharpCollection)\
-[Hacktricks book](https://book.hacktricks.xyz/)
+[Hacktricks book](https://book.hacktricks.wiki/)
